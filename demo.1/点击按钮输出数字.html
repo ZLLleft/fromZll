@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击按钮显示数字</title>
+</head>
+<body>
+    <div id="number">0</div> <!--显示数字-->
+    <button onclick="showNumber(1)">1</button> <!--点击按钮1，调用showNumber()函数，显示数字1,以此类推到9-->
+    <button onclick="showNumber(2)">2</button> 
+    <button onclick="showNumber(3)">3</button>
+    <button onclick="showNumber(4)">4</button>
+    <button onclick="showNumber(5)">5</button>
+    <button onclick="showNumber(6)">6</button>
+    <button onclick="showNumber(7)">7</button>
+    <button onclick="showNumber(8)">8</button>
+    <button onclick="showNumber(9)">9</button>
+    <button onclick="number.innerHTML='0'">Reset</button> <!--点击重置按钮，显示数字0-->
+    <script>
+    function showNumber(i)               
+    {
+        document.getElementById("number").innerHTML=i;         
+    }
+        
+    </script>
+</body>
+</html>
