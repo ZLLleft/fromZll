@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计数器</title>
+   
+</head>
+<body>
+    <button type="button" onclick="add()" style="background-color: #7ED321;width: 90px;height: 50px;color: #FFFFFF;font-size: 2em;">+</button>
+    
+    <div id="demo" style="display:inline-block;width:90px;text-align:center;font-size: 1.5em;">0</div>
+    
+    <button type="button" onclick="sub()" style="background-color: rgb(33, 211, 152);width: 90px;height: 50px;color: #FFFFFF;font-size: 2em;">-</button>
+
+    <script>
+        function add(){
+            document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML/1+1;
+        }
+        function sub(){
+            document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML/1-1;
+        }
+    </script>
+  
+</body>
+</html>
