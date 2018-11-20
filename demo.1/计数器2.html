@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计数器2：三组加减按钮</title>
+    <style>
+    #container{
+        display: flex;
+        align-items: center;
+        width: 400px;
+        justify-content: space-between;
+    }
+    button{
+        padding: 10px 40px;
+        font-size: 25px;
+        border-radius: 25px;
+    }
+    .add{
+        background-color: #14bf90;
+    }
+    .minus{
+        background-color: #d21d1d;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="add1" class="add">+</button>
+        <h1 id="show1">0</h1>
+        <button id="minus1" class="minus">-</button>
+    </div>
+    <div id="container">
+        <button id="add2" class="add">+</button>
+        <h1 id="show2">0</h1>
+        <button id="minus2" class="minus">-</button>
+    </div>
+    <div id="container">
+        <button id="add3" class="add">+</button>
+        <h1 id="show3">0</h1>
+        <button id="minus3" class="minus">-</button>
+    </div>
+    
+
+    <script>
+    var number1=document.getElementById("show");
+    var addbtn1=document.getElementById("add");
+    var minusbtn1=document.getElementById("minus");
+    var number2=document.getElementById("show");
+    var addbtn2=document.getElementById("add");
+    var minusbtn2=document.getElementById("minus");
+    var number3=document.getElementById("show");
+    var addbtn3=document.getElementById("add");
+    var minusbtn3=document.getElementById("minus");
+
+    addbtn1.addEventListener("click",() => { add(1) });
+    minusbtn1.addEventListener("click",() => { add(-1) });
+    addbtn2.addEventListener("click",() => { add(1) });
+    minusbtn2.addEventListener("click",() => { add(-1) });
+    addbtn3.addEventListener("click",() => { add(1) });
+    minusbtn3.addEventListener("click",() => { add(-1) });
+
+    function add(payLoad){
+        number.innerHTML=parseInt("number.innerHTML")+payLoad;
+    }
+  
+    </script>
+</body>
+</html>

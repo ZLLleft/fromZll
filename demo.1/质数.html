@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>找质数</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+     for(var i=3;i<=1000;i++){
+         for(var j=2;j<i;j++){
+             if(i%j==0){
+                break;
+             }else{
+                arr[arr.length]=i;
+                break;
+             }
+            }
+        }
+         console.log(arr);
+   
+     
+     
+    </script>
+</body>
+</html>
