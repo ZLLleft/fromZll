@@ -8,15 +8,12 @@
 </head>
 <body>
     <script>
-        var arr=[];
+        var arr=[2];
      for(var i=3;i<=1000;i++){
          for(var j=2;j<i;j++){
-             if(i%j==0){
-                break;
-             }else{
-                arr[arr.length]=i;
-                break;
-             }
+             if(i%j==0)    break;
+             if(j==i-1)   arr[arr.length]=i;
+            
             }
         }
          console.log(arr);
