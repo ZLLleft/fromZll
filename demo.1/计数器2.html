@@ -23,48 +23,68 @@
     .minus{
         background-color: #d21d1d;
     }
+    h1{
+        display: inline-block;
+    }
+    #showSum{
+        margin-left: 98px;
+    }
+   
     </style>
 </head>
 <body>
     <div id="container">
-        <button id="add1" class="add">+</button>
+        <button id="A1" class="add">+</button>
         <h1 id="show1">0</h1>
-        <button id="minus1" class="minus">-</button>
+        <button id="B1" class="minus">-</button>
     </div>
     <div id="container">
-        <button id="add2" class="add">+</button>
+        <button id="A2" class="add">+</button>
         <h1 id="show2">0</h1>
-        <button id="minus2" class="minus">-</button>
+        <button id="B2" class="minus">-</button>
     </div>
     <div id="container">
-        <button id="add3" class="add">+</button>
+        <button id="A3" class="add">+</button>
         <h1 id="show3">0</h1>
-        <button id="minus3" class="minus">-</button>
+        <button id="B3" class="minus">-</button>
     </div>
-    
+
+    <h1>Total:</h1>
+    <h1 id="showSum">0</h1>
 
     <script>
-    var number1=document.getElementById("show");
-    var addbtn1=document.getElementById("add");
-    var minusbtn1=document.getElementById("minus");
-    var number2=document.getElementById("show");
-    var addbtn2=document.getElementById("add");
-    var minusbtn2=document.getElementById("minus");
-    var number3=document.getElementById("show");
-    var addbtn3=document.getElementById("add");
-    var minusbtn3=document.getElementById("minus");
+        var BtnA1 = query("A1");
+        var BtnB1 = query("B1");
+        var BtnA2 = query("A2");
+        var BtnB2 = query("B2");
+        var BtnA3 = query("A3");
+        var BtnB3 = query("B3");
+        var showNum1 = query("show1");
+        var showNum2 = query("show2");
+        var showNum3 = query("show3");
+        var showSum = query("showSum");
 
-    addbtn1.addEventListener("click",() => { add(1) });
-    minusbtn1.addEventListener("click",() => { add(-1) });
-    addbtn2.addEventListener("click",() => { add(1) });
-    minusbtn2.addEventListener("click",() => { add(-1) });
-    addbtn3.addEventListener("click",() => { add(1) });
-    minusbtn3.addEventListener("click",() => { add(-1) });
+        click(BtnA1,showNum1,1);
+        click(BtnB1,showNum1,-1);
+        click(BtnA2,showNum2,1);
+        click(BtnB2,showNum2,-1);
+        click(BtnA3,showNum3,1);
+        click(BtnB3,showNum3,-1);
 
-    function add(payLoad){
-        number.innerHTML=parseInt("number.innerHTML")+payLoad;
-    }
-  
+
+        function click(whichBtn,whichShow,num){
+            whichBtn.addEventListener("click",()=>add(whichShow,num));
+        }
+
+        function query(whichId){
+            return document.getElementById(whichId);
+
+        }
+        function add(whichShow,num){
+            whichShow.innerHTML = parseInt(whichShow.innerHTML) + num;
+            showSum.innerHTML =  showNum1.innerHTML*1 + showNum2.innerHTML*1 + showNum3.innerHTML*1;
+        }
     </script>
+    
 </body>
 </html>
