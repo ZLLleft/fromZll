@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>输入框</title>
+    <style>
+    #content{
+        width: 200px;
+        height: 30px;
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <h3>请输入：</h3>
+    <input type="text" id="content" value="" onkeyup="fun(this.value)">
+    <p id="show"></p>
+    <script>
+    function fun(x){
+        show.innerHTML = x;
+    }
+    </script>
+</body>
+</html>
