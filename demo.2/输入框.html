@@ -10,17 +10,35 @@
         width: 200px;
         height: 30px;
         border: 1px solid black;
+        font-size: 20px;
     }
     </style>
 </head>
 <body>
+    <!-- 方法一 -->
+
     <h3>请输入：</h3>
     <input type="text" id="content" value="" onkeyup="fun(this.value)">
-    <p id="show"></p>
+    <h1 id="show"></h1>
     <script>
     function fun(x){
         show.innerHTML = x;
     }
     </script>
+
+
+    <!-- 方法二 -->
+    <!-- <h3>请输入：</h3>
+    <input type="text" id="content">
+    <h1 id="show"></h1>
+    <script>
+        const content = document.querySelector("#content");
+        const show = document.querySelector("#show");
+        content.addEventListener("input",display);
+        function display(){
+            show.innerHTML = content.value;
+        }
+    </script> -->
+
 </body>
 </html>
