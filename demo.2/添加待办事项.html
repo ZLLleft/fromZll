@@ -6,36 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>待办事项</title>
     <style>
-    
-
-    
-    #demo{
+    #div1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input{
         width: 200px;
         height: 25px;
         border: 1px solid black;
         font-size: 20px;
     }
-    li{
+    .showList{
+        margin: 20px;
+        padding: 0px;
+        line-height: 30px;
         list-style-position: inside;
+        list-style: none;
+    }
+    li:before{
+        content: "❤";
+        color: rgb(235, 93, 116);
     }
     </style>
 </head>
 <body>
-    <div>
+    
+    <div id="div1">
         <h1>添加待办事项</h1>
-        <input id="demo" type="text">
-        <button id="btn">□添加</button>
-        <ul>
-            <li>8:00出门</li>
-            <li>9:00去教研室</li>
-            <li>11:30吃午饭</li>
+        <div class="div2">
+            <input type="text">
+            <button id="btn">添加</button>
+        </div>
+        
+        <ul class="showList">
+            <li> 周一 实验</li>
+            <li> 周二 报告</li>
+            <li> 周三 论文</li>
+            <li> 周四 组会</li>
         </ul>
+
     </div>
     <script>
-        bth.add
-    function addDisc(){
         
-    }
+        var input = document.querySelector("input");
+        var btn = document.querySelector("#btn");
+        var output = document.querySelector(".showList");
+    
+        btn.addEventListener("click",addList);
+
+        function addList(){
+            if(input.value){
+                var Li = document.createElement("li");
+            Li.textContent = " "+input.value;
+            output.appendChild(Li);    
+            }else{
+                alert("提示：您还没有输入内容哦(⊙o⊙)~");
+            }
+            
+        }
+      
     </script>
     
 </body>
